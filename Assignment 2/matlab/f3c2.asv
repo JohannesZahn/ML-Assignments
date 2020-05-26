@@ -1,0 +1,9 @@
+function [evidence] = f3c2(x)
+
+%% return a function!
+likelihood_barsch = f3c1_likelihood_barsch(x);
+likelihood_lachs = f3c1_likelihood_lachs(x)
+evidence = likelihood_barsch.*0.5 + likelihood_barsch.*0.5
+
+end
+
