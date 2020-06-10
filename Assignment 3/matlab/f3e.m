@@ -14,10 +14,12 @@ N = @(x) g(x, 3, 1);
 
 B = @(i) @(x) g(x, mu_n(i), (var_0*var) / (n(i)*var_0+var));
 
+x = [0,6];
+
 for i = 1:length(n)
-    l2dist(i) = sqrt(dot(N-B(i),B(i)-N));
+    b = B(i);
+    l2dist(i) = norm(b(x)-N(x));
 end
 
-
-
 end
+
